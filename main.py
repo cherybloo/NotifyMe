@@ -2,6 +2,7 @@ import os
 import base64
 import email
 
+from sound import *
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -104,6 +105,9 @@ def get_message(service, message_id):
 	print("--------------------------------------")
 	print(msg_body,end='\n\n')
 	print("--------------------------------------")
+	quad()
+	text_to_speech(msg_body)
+	rick()
 
 if __name__ == "__main__":
 	main()
